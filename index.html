@@ -1,32 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
-    <script src="lib/ng-announcekit.js"></script>
-    <script>
-        angular.module('test', ['ng-announcekit'])
-            .controller('testController', ['$scope',
-                function ($scope) {
-                    $scope.widgetstyle = {
-                        margin: '10px'
-                    }
+  <title></title>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+  <script src="lib/ng-announcekit.js"></script>
+  <script>
+    angular.module('test', ['ng-announcekit'])
+      .controller('testController', ['$scope',
+        function ($scope) {
+          $scope.widgetstyle = {
+            margin: '10px'
+          }
 
-                    $scope.user = {
-                        id: Date.now(),
-                        name: "test_user_name"
-                    }
+          $scope.user = {
+            id: Date.now(),
+            name: "test_user_name"
+          }
 
-                    $scope.data = {
-                        member_type: "paid"
-                    }
+          $scope.data = {
+            member_type: "paid"
+          }
 
-                }
-            ])
-
-    </script>
+        }
+      ])
+  </script>
 </head>
 <body ng-app="test" ng-controller="testController">
-    <announcekit widgetstyle="widgetstyle" data="data" widget="https://announcekit.app/widgets/v2/19zWjC" user="user">What's new</announcekit>
+<announcekit widgetstyle="widgetstyle" data="data" widget="https://announcekit.app/widgets/v2/19zWjC" user="user">What's new</announcekit>
 </body>
 </html>
